@@ -21,5 +21,9 @@ export const sendReservation = async (req, res, next) => {
     return next(error);
   }
 };
+export const getReservation = async (req, res, next) => {
+   const user = await Reservation.find()
+   res.status(200).json(user);
+};
 
 
